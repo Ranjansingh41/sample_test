@@ -48,10 +48,10 @@ pipelines:
              # - add_pipeline_variables pipelineVaribale="foo  bar"
             - export_run_variables 
             - export_pipeline_variables          
-#             - add_pipeline_files $PWD/file.txt jfrog_pipeline
-#             - find_resource_variable repo_pipe resourcePath
-#             - restore_cache_files jfrog_pipe $PWD/file.txt
-#             - cat file.txt
+            - add_pipeline_files $PWD/file.txt jfrog_pipeline
+            - find_resource_variable repo_pipe resourcePath
+            - restore_cache_files jfrog_pipe $PWD/file.txt
+            - cat file.txt
 #             - openssl genrsa -out key.pem 1024 
 #             - openssl rsa -in key.pem -text -noout
 #             - openssl rsa -in key.pem -pubout -out pub.pem 
@@ -87,10 +87,10 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            #- pushd $res_repo_pipe_resourcePath
-            #- restore_run_files jfrog $PWD/test.txt
-            #- cat $PWD/test.txt
-            #- restore_cache_files jfrog_pipe $PWD/file.txt
+            - pushd $res_repo_pipe_resourcePath
+            - restore_run_files jfrog $PWD/test.txt
+            - cat $PWD/test.txt
+            - restore_cache_files jfrog_pipe $PWD/file.txt
             - echo "$imageTag"
             - echo $runVariable
             - echo $pipelineVariable
