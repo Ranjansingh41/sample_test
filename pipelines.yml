@@ -38,7 +38,7 @@ pipelines:
             - compare_git --resource testutl --commit-range HEAD~2..HEAD pipelines.yml
             - update_commit_status testutl --status failure --message "My description 123" --context "stepB"
             - touch sample.json
-            - echo "{  "DOCKER_USERNAME": "shippabledocker",  "DOCKER_URL": "https://hub.docker.com/shippabledocker"}" >> sample.json
+            - echo "{"DOCKER_USERNAME": "shippabledocker",  "DOCKER_URL": "https://hub.docker.com/shippabledocker"}" >> sample.json
             - read_json $res_repo_pipe_resourcePath/tests/yaml/sample.json "DOCKER_USERNAME"
             - add_cache_files $PWD/file.txt jfrog_pipe 
             - add_run_variables imageTag="master"
