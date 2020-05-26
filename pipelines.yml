@@ -49,7 +49,7 @@ pipelines:
             - export_run_variables 
             - export_pipeline_variables          
             - add_pipeline_files $PWD/file.txt jfrog_pipeline
-            - find_resource_variable repo_pipe resourcePath
+            - find_resource_variable testutl resourcePath
             - restore_cache_files jfrog_pipe $PWD/file.txt
             - cat file.txt
 #             - openssl genrsa -out key.pem 1024 
