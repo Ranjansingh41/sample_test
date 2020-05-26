@@ -78,7 +78,7 @@ pipelines:
           inputSteps:
             - name: utilityFunction
           inputResources:
-            - name: repo_pipe                
+            - name: testutl
         execution:
           onExecute:
             - printenv
@@ -97,7 +97,7 @@ pipelines:
           integrations:
             - name: ranjan_github
           inputResources:
-            - name: repo_pipe
+            - name: testutl
           inputSteps:
             - name: utilityFunction41      
 
@@ -110,22 +110,22 @@ pipelines:
 #             - retry_command printen
             - popd
             
-      - name: utilityFunction412
-        type: Bash
-        configuration:
-          nodePool: win_2019        
-          integrations:
-            - name: s_gitHub
-          inputResources:
-            - name: repo_pipe
-          inputSteps:
-            - name: utilityFunction3         
+#       - name: utilityFunction412
+#         type: Bash
+#         configuration:
+#           nodePool: win_2019        
+#           integrations:
+#             - name: s_gitHub
+#           inputResources:
+#             - name: repo_pipe
+#           inputSteps:
+#             - name: utilityFunction3         
 
-        execution:
-          onExecute:
-            - $imageTag
-            - $runVariable
-            - $scm
-            - $pipelineVaribale
+#         execution:
+#           onExecute:
+#             - $imageTag
+#             - $runVariable
+#             - $scm
+#             - $pipelineVaribale
 
          
