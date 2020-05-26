@@ -76,7 +76,7 @@ pipelines:
           integrations:
             - name: ranjan_github
           inputSteps:
-            - name: utilityFunction
+            - name: UtilityFunction
           inputResources:
             - name: testutl
         execution:
