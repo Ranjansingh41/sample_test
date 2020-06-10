@@ -4,8 +4,8 @@ pipelines:
       - name: matrix_2
         type: Matrix
         stepMode: Bash
-#         configuration:
-#           timeoutSeconds: 3600
+        configuration:
+          timeoutSeconds: 3600
         matrix:
           environmentVariables:
             - env1: one
