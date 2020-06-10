@@ -1,5 +1,5 @@
 pipelines:
-  - name: pipeline_language 
+  - name: matrix_build
     steps:
       - name: matrix_2
         type: Matrix
