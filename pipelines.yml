@@ -1,113 +1,99 @@
 - name: matrix_2
-    type: Matrix
-    stepMode: Bash
+  type: Matrix
+  stepMode: Bash
 #     configuration:
 #       inputSteps:
 #         - name: Matrix_Fan_Out_1
 #       inputResources:
 #         - name: self_repo
-    matrix:
-      environmentVariables:
-        - env1: one
-          env2: two
-          env3: three
-        - env1: changed1
-          env2: changed2
-        - key_1: value1
-          key_2: value2
-      runtimes:
-        - type: image
-          image:
-            auto:
-              language: java
-              versions:
-                - 13
+  matrix:
+    environmentVariables:
+      - env1: one
+        env2: two
+        env3: three
+      - env1: changed1
+        env2: changed2
+      - key_1: value1
+        key_2: value2
+    runtimes:
+      - type: image
+        image:
+          auto:
+            language: java
+            versions:
+              - 13
                 
-        - type: image
-          image:
-            auto:
-              language: java
-              versions:
-                - 8
-        - type: image
-          image:
-            auto:
-              language: java
-              versions:
-                - 11
+      - type: image
+        image:
+          auto:
+            language: java
+            versions:
+              - 8
+      - type: image
+        image:
+          auto:
+            language: java
+            versions:
+              - 11
                 
-        - type: image
-          image:
-            auto:
-              language: node
-              versions:
-                - 8.17.0
+      - type: image
+        image:
+          auto:
+            language: node
+            versions:
+              - 8.17.0
                 
-        - type: image
-          image:
-            auto:
-              language: node
-              versions:
-                - 10.18.0
+      - type: image
+        image:
+          auto:
+            language: node
+            versions:
+              - 10.18.0
                 
-        - type: image
-          image:
-            auto:
-              language: node
-              versions:
-                - 12.14.0
+      - type: image
+        image:
+          auto:
+            language: node
+            versions:
+              - 12.14.0
                 
-        - type: image
-          image:
-            auto:
-              language: go
-              versions:
-                - 1.11.13
+      - type: image
+        image:
+          auto:
+            language: go
+            versions:
+              - 1.11.13
                 
-        - type: image
-          image:
-            auto:
-              language: go
-              versions:
-                - 1.13.7
+      - type: image
+        image:
+          auto:
+            language: go
+            versions:
+              - 1.13.7
                 
-        - type: image
-          image:
-            auto:
-              language: go
-              versions:
-                - 1.12.14
+      - type: image
+        image:
+          auto:
+            language: go
+            versions:
+              - 1.12.14
                 
-        - type: image
-          image:
-            auto:
-              language: cpp
-              versions:
-                - 9.0.0
+      - type: image
+        image:
+          auto:
+            language: cpp
+            versions:
+              - 9.0.0
                 
-        - type: image
-          image:
-            auto:
-              language: cpp
-              versions:
-                - 8.0.0
-                
-#         - type: image
-#           image:
-#             auto:
-#               language: node
-#               versions:
-#                 - 8.17.0
-                
-#         - type: image
-#           image:
-#             auto:
-#               language: node
-#               versions:
-#                 - 8.17.0        
-    execution:
-      onExecute:
-        - echo "I am on matrix step"
+      - type: image
+        image:
+          auto:
+            language: cpp
+            versions:
+              - 8.0.0 
+  execution:
+    onExecute:
+      - echo "I am on matrix step"
 #         - ls -l ./Matrix_Fan_Out_1
 #         - 'touch ${steplet_id}_file'
 #         - 'echo "Created file on steplet ${steplet_id}" > ${steplet_id}_file'
