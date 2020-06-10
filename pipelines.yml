@@ -4,6 +4,7 @@ pipelines:
       - name: matrix_2
         type: Matrix
         stepMode: Bash
+        configuration:
         matrix:
           environmentVariables:
             - env1: one
