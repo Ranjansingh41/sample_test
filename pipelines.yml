@@ -37,19 +37,19 @@ pipelines:
                   versions:
                     - 8
                     
-#             - type: image
-#               image:
-#                 auto:
-#                   language: node
-#                   versions:
-#                     - 8.17.0
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - 8.17.0
                     
-#             - type: image
-#               image:
-#                 auto:
-#                   language: node
-#                   versions:
-#                     - 10.18.0
+            - type: image
+              image:
+                auto:
+                  language: node
+                  versions:
+                    - 10.18.0
                     
 #             - type: image
 #               image:
