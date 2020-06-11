@@ -30,12 +30,12 @@ pipelines:
                   versions:
                     - 11
                     
-            - type: image
-              image:
-                auto:
-                  language: java
-                  versions:
-                    - 8
+#             - type: image
+#               image:
+#                 auto:
+#                   language: java
+#                   versions:
+#                     - 8
                     
 #             - type: image
 #               image:
