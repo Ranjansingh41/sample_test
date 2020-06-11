@@ -68,30 +68,30 @@ pipelines:
             - type: image
               image:
                 auto:
-                  language: node
+                  language: cpp
                   versions:
                     - 9.0.0
                     
-#             - type: image
-#               image:
-#                 auto:
-#                   language: go
-#                   versions:
-#                     - 1.11.13 
+            - type: image
+              image:
+                auto:
+                  language: go
+                  versions:
+                    - 1.11.13 
                     
-#             - type: image
-#               image:
-#                 auto:
-#                   language: go
-#                   versions:
-#                     - 1.13.7 
+            - type: image
+              image:
+                auto:
+                  language: go
+                  versions:
+                    - 1.13.7 
                     
-#             - type: image
-#               image:
-#                 auto:
-#                   language: go
-#                   versions:
-#                     - 1.12.14        
+            - type: image
+              image:
+                auto:
+                  language: go
+                  versions:
+                    - 1.12.14        
         execution:
           onExecute:
             - echo "I am on matrix step"
