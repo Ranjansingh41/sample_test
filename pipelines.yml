@@ -6,7 +6,7 @@ resources:
       path: Ranjansingh41/sample_test 
       
 pipelines:
-  - name: bash test
+  - name: bash_test
     steps:
       - name: matrix_2_3
         type: Bash
