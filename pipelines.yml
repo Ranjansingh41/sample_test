@@ -12,7 +12,7 @@ pipelines:
         type: Matrix
         stepMode: Bash
         configuration:
-          nodePool: u16dynamic
+          nodePool: u18dynamic
           inputResources: # optional
             - name: test_bash  #u16dynamic
         stepletMultipliers:
@@ -32,12 +32,12 @@ pipelines:
                   versions:
                     - 13
                
-#             - type: image
-#               image:
-#                 auto:
-#                   language: java
-#                   versions:
-#                     - 11
+            - type: image
+              image:
+                auto:
+                  language: java
+                  versions:
+                    - 11
                     
 #             - type: image
 #               image:
