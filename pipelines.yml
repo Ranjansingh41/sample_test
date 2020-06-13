@@ -8,7 +8,7 @@ resources:
 pipelines:
   - name: bash_test
     steps:
-      - name: matrix_2_3
+      - name: Test_pipelines
         type: Matrix
         stepMode: Bash
         configuration:
