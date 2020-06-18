@@ -1,5 +1,5 @@
 resources:
-  - name: test_bash
+  - name: test_bash1
     type: GitRepo
     configuration:
       gitProvider: ranjan_github
@@ -14,7 +14,7 @@ pipelines:
         configuration:
           nodePool: u18dynamic
           inputResources: # optional
-            - name: test_bash  #u16dynamic
+            - name: test_bash1  #u16dynamic
         stepletMultipliers:
           environmentVariables:
             - env1: one
@@ -27,7 +27,7 @@ pipelines:
         type: FanOut
         configuration:
           inputResources:
-            - name: test_bash
+            - name: test_bash1
         execution:
           onExecute:
             - echo "I am on matrix step"
