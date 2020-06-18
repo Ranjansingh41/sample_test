@@ -27,8 +27,8 @@ pipelines:
         type: PreMatrix
         configuration:
           nodePool: u18dynamic
-          inputSteps:
-            - name: Test_pipelines
+#           inputSteps:
+#             - name: Test_pipelines
           inputResources:
             - name: test_bash1
         execution:
