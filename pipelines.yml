@@ -27,6 +27,8 @@ pipelines:
         type: FanOut
         configuration:
           nodePool: u18dynamic
+          inputSteps:
+            - name: Test_pipelines
           inputResources:
             - name: test_bash1
         execution:
