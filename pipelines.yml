@@ -26,7 +26,6 @@ pipelines:
       - name: Matrix_Fan_Out_2
         type: FanOut
         configuration:
-          configuration:
             nodePool: u18dynamic
           inputResources:
             - name: test_bash1
