@@ -12,7 +12,7 @@ pipelines:
         type: Matrix
         stepMode: Bash
         configuration:
-          nodePool: 18dynamic
+          nodePool: u18dynamic
           inputResources: # optional
             - name: test_bash  #u16dynamic
         stepletMultipliers:
@@ -26,7 +26,7 @@ pipelines:
       - name: Matrix_Fan_Out_2
         type: FanOut
         configuration:
-          inputSteps:
+          inputResources:
             - name: test_bash
         execution:
           onExecute:
