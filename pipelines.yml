@@ -6,7 +6,7 @@ resources:
       path: Ranjansingh41/sample_test 
       
 pipelines:
-  - name: bash_test
+  - name: dynamic_node_test
     steps:
       - name: Test_pipelines
         type: Matrix
