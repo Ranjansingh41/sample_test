@@ -12,105 +12,23 @@ pipelines:
         type: Matrix
         stepMode: Bash
         configuration:
-#           nodePool: c7dynamic
+          nodePool: 18dynamic
           inputResources: # optional
             - name: test_bash  #u16dynamic
         stepletMultipliers:
           environmentVariables:
             - env1: one
-              env2: two
-              env3: three
-            - env1: changed1
-              env2: changed2
-            - key_1: value1
-              key_2: value2
-          runtimes:
-            - type: image
-              image:
-                auto:
-                  language: java
-                  versions:
-                    - 13
-               
-            - type: image
-              image:
-                auto:
-                  language: java
-                  versions:
-                    - 11
-                    
-            - type: image
-              image:
-                auto:
-                  language: java
-                  versions:
-                    - 8
-                    
-            - type: image
-              image:
-                auto:
-                  language: node
-                  versions:
-                    - 8.17.0
-                    
-#             - type: image
-#               image:
-#                 auto:
-#                   language: node
-#                   versions:
-#                     - 10.18.0
-                    
-#             - type: image
-#               image:
-#                 auto:
-#                   language: node
-#                   versions:
-#                     - 12.14.0
-                    
-#             - type: image
-#               image:
-#                 auto:
-#                   language: cpp
-#                   versions:
-#                     - 8.0.0 
-                    
-#             - type: image
-#               image:
-#                 auto:
-#                   language: cpp
-#                   versions:
-#                     - 9.0.0
-                    
-#             - type: image
-#               image:
-#                 auto:
-#                   language: go
-#                   versions:
-#                     - 1.11.13 
-                    
-#             - type: image
-#               image:
-#                 auto:
-#                   language: go
-#                   versions:
-#                     - 1.13.7 
-                    
-#             - type: image
-#               image:
-#                 auto:
-#                   language: go
-#                   versions:
-#                     - 1.12.14        
+              env2: two 
         execution:
           onExecute:
             - echo "I am on matrix step"
-    #         - ls -l ./Matrix_Fan_Out_1
-    #         - 'touch ${steplet_id}_file'
-    #         - 'echo "Created file on steplet ${steplet_id}" > ${steplet_id}_file'
-    #         - >-
-    #           echo "Envs env1 = $env1 , env2 = $env2 , env3 = $env3" >>
-    #           ${steplet_id}_file
-    #         - >-
-    #           echo "Runtime image name - $step_image_name, Runtime image tag -
-    #           $step_image_tag
-    
+            
+      - name: Matrix_Fan_Out_2
+        type: FanOut
+        configuration:
+          inputSteps:
+            - name: test_bash
+        execution:
+          onExecute:
+            - echo "I am on matrix step"
+            
