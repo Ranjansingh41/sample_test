@@ -24,7 +24,7 @@ pipelines:
             - echo "I am on matrix step"
             
       - name: Matrix_Fan_Out_2
-        type: FanOut
+        type: PreMatrix
         configuration:
           nodePool: u18dynamic
 #           inputSteps:
