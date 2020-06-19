@@ -15,10 +15,10 @@ pipelines:
 #           nodePool: u18dynamic
           inputResources: # optional
             - name: test_bash1  #u16dynamic
-        stepletMultipliers:
-          environmentVariables:
-            - env1: one
-              env2: two 
+#         stepletMultipliers:
+#           environmentVariables:
+#             - env1: one
+#               env2: two 
         execution:
           onExecute:
             - echo "I am on matrix step"
