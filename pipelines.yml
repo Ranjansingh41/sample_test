@@ -23,15 +23,15 @@ pipelines:
           onExecute:
             - echo "I am on matrix step"
             
-#       - name: Matrix_Fan_Out_2
-#         type: PreMatrix
-#         configuration:
+      - name: Matrix_Fan_Out_2
+        type: PreMatrix
+        configuration:
 #           nodePool: u18dynamic
-# #           inputSteps:
-# #             - name: Test_pipelines
-#           inputResources:
-#             - name: test_bash1
-#         execution:
-#           onExecute:
-#             - echo "I am on matrix step"
+#           inputSteps:
+#             - name: Test_pipelines
+          inputResources:
+            - name: test_bash1
+        execution:
+          onExecute:
+            - echo "I am on matrix step"
             
