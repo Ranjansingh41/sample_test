@@ -9,8 +9,8 @@ pipelines:
   - name: dynamic_node_test
     steps:
       - name: Test_pipelines
-        type: Matrix
-        stepMode: Bash
+        type: bash
+#         stepMode: Bash
         configuration:
 #           nodePool: u18dynamic
           inputResources: # optional
