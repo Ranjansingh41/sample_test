@@ -4,6 +4,8 @@ resources:
     configuration:
       gitProvider: ranjan_github
       path: Ranjansingh41/pipelines_run_1
+      branches:
+        include: ^tests-failing$  
       
 pipelines:
   - name: Pipeline
