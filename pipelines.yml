@@ -12,7 +12,7 @@ pipelines:
         type: bash
 #         stepMode: Bash
         configuration:
-#           nodePool: u16dynamic_azure_bi
+          nodePool: u18-eu-west
           inputResources: # optional
             - name: test_bash1  #u16dynamic
 #         stepletMultipliers:
@@ -26,7 +26,7 @@ pipelines:
       - name: Matrix_pre_2
         type: PreMatrix
         configuration:
-#           nodePool: u16dynamic_azure_bi
+          nodePool: u18-eu-west
 #           inputSteps:
 #             - name: Test_pipelines
           inputResources:
@@ -38,7 +38,7 @@ pipelines:
       - name: Matrix_post_2
         type: PostMatrix
         configuration:
-#           nodePool: u16dynamic_azure_bi
+          nodePool: u18-eu-west
 #           inputSteps:
 #             - name: Test_pipelines
           inputResources:
