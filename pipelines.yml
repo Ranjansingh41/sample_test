@@ -24,7 +24,7 @@ pipelines:
             - echo "I am on matrix step"
             
       - name: Matrix_pre_2
-        type: FanIn #PreMatrix
+        type: PreMatrix
         configuration:
 #           nodePool: u18-us-east
 #           inputSteps:
@@ -36,7 +36,7 @@ pipelines:
             - echo "I am on matrix step"
             
       - name: Matrix_post_2
-        type: PostMatrix
+        type: FanOut #PostMatrix
         configuration:
 #           nodePool: u18-us-east
 #           inputSteps:
