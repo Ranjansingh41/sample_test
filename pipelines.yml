@@ -24,7 +24,7 @@ pipelines:
             - echo "I am on matrix step"
             
       - name: Matrix_pre_2
-        type: PreMatrix
+        type: FanIn #PreMatrix
         configuration:
 #           nodePool: u18-us-east
 #           inputSteps:
