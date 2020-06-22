@@ -38,11 +38,11 @@ pipelines:
       - name: Matrix_post_2
         type: PostMatrix
         configuration:
-          nodePool: azure
+          nodePool: c7-us-west-dynamic
 #           inputSteps:
 #             - name: Test_pipelines
           inputResources:
-            - name: c7-us-west-dynamic
+            - name: test_bash1
         execution:
           onExecute:
             - echo "I am on matrix step"      
